@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   sqflite: ^2.0.0+3
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+   - load_json/dados.json
    - imagens/call-of-duty-infinite-warfare.png
    - imagens/call-of-duty-wwii.png
    - imagens/fifa-18.png
@@ -56,6 +58,7 @@ flutter:
    - imagens/super-mario-odyssey.png
    - imagens/terra-media-sombras-de-mordor.png
    - imagens/the-witcher-iii-wild-hunt.png
+   - imagens/logo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

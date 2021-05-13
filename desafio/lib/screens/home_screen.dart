@@ -2,6 +2,7 @@ import 'package:desafio/tabs/carrinho_tab.dart';
 import 'package:desafio/tabs/home_tab.dart';
 import 'package:desafio/tabs/perfil_tab.dart';
 import 'package:desafio/tabs/produtos_tab.dart';
+import 'package:desafio/widgets/custom_appbar.dart';
 import 'package:desafio/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -33,13 +34,7 @@ class HomeScreen extends StatelessWidget {
           body: PerfilTab(),
         ),
         Scaffold(
-          appBar: AppBar(
-            backgroundColor: Color(0xFF1B54EA),
-            title: Text("Produtos"),
-            centerTitle: true,
-            backwardsCompatibility: false,
-            systemOverlayStyle: SystemUiOverlayStyle(statusBarBrightness: Brightness.light,),
-          ),
+          appBar: CustomAppBar(),
           drawer: CustomDrawer(_pageController),
           body: ProdutosTab(),
         ),

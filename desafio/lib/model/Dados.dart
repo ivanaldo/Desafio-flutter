@@ -1,115 +1,41 @@
-import 'dart:convert';
+
 
 class Dados {
+  int _id;
+  String _name;
+  double _price;
+  int _score;
+  String _image;
 
-  Dados({this.id, this.nome, this.price, this.score, this.image});
+  Dados();
 
-  int id;
-  String nome;
-  double price;
-  int score;
-  String image;
+  String get image => _image;
 
-  factory Dados.fromJson(Map<String, dynamic> json) =>
-      Dados(
-          id: json["id"],
-          nome: json["nome"],
-          price: json["price"],
-          score: json["score"],
-          //image: json["image"]
-        //(json["image"] as List).map((conteudo) => Email.fromJson(conteudo)).toList()
-      );
+  set image(String value) {
+    _image = value;
+  }
 
-   main() {
-    final String json = """{
-  
-   "dadosJogo" [
-    {
-      "id": 312,
-      "name": "Super Mario Odyssey",
-      "price": 197.88,
-      "score": 100,
-      "image": "super-mario-odyssey.png"
-    },
-    {
-      "id": 201,
-      "name": "Call Of Duty Infinite Warfare",
-      "price": 49.99,
-      "score": 80,
-      "image": "call-of-duty-infinite-warfare.png"
-    },
-    {
-      "id": 102,
-      "name": "The Witcher III Wild Hunt",
-      "price": 119.5,
-      "score": 250,
-      "image": "the-witcher-iii-wild-hunt.png"
-    },
-    {
-      "id": 99,
-      "name": "Call Of Duty WWII",
-      "price": 249.99,
-      "score": 205,
-      "image": "call-of-duty-wwii.png"
-    },
-    {
-      "id": 12,
-      "name": "Mortal Kombat XL",
-      "price": 69.99,
-      "score": 150,
-      "image": "mortal-kombat-xl.png"
-    },
-    {
-      "id": 74,
-      "name": "Shards of Darkness",
-      "price": 71.94,
-      "score": 400,
-      "image": "shards-of-darkness.png"
-    },
-    {
-      "id": 31,
-      "name": "Terra Média: Sombras de Mordor",
-      "price": 79.99,
-      "score": 50,
-      "image": "terra-media-sombras-de-mordor.png"
-    },
-    {
-      "id": 420,
-      "name": "FIFA 18",
-      "price": 195.39,
-      "score": 325,
-      "image": "fifa-18.png"
-    },
-    {
-      "id": 501,
-      "name": "Horizon Zero Dawn",
-      "price": 115.8,
-      "score": 290,
-      "image": "horizon-zero-dawn.png"
-    }
-  ]
-}
+  int get score => _score;
 
-""";
+  set score(int value) {
+    _score = value;
+  }
 
-    final jsonMap = jsonDecode(json);
+  double get price => _price;
 
-    List<Dados> dadosJogo;
-    dadosJogo = (jsonMap["dadosJogo"] as List)
-        .map((dado) => Dados.fromJson(dado))
-        .toList();
+  set price(double value) {
+    _price = value;
+  }
 
-    for(int i = 0; i <= dadosJogo.length; i++){
-      final jogos = dadosJogo[i];
+  String get name => _name;
 
-     // final String usuarioSelecionado = """
-    //Nome: ${jogos.nome}
-    //Telefone: ${jogos.price}
-    //Emails: ${jogos.score}
-  //""";
-      //print(usuarioSelecionado);
-      return jogos;
-    }
+  set name(String value) {
+    _name = value;
+  }
 
+  int get id => _id;
+
+  set id(int value) {
+    _id = value;
   }
 }

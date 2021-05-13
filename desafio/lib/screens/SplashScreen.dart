@@ -23,9 +23,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset("imagens/the-witcher-iii-wild-hunt.png"),
-      ),
+      body: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("imagens/logo.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        ),
     );
   }
 }

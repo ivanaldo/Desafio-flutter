@@ -2,7 +2,6 @@ import 'package:desafio/tiles/drawer_tile.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {
-  //const CustomDrawer({Key key}) : super(key: key);
 
   final PageController pageController;
 
